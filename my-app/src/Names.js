@@ -1,11 +1,12 @@
-import React from 'react';
 import './Names.css';
+import boots from './assets/boots.png';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const Names = () => {
   return (
     <div>
-      <h1>Names Page</h1>
-      <p>This is the Names page!</p>
+      <img src={boots} className="Welcome" alt="logo" />
     </div>
   );
 };
