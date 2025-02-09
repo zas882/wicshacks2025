@@ -4,6 +4,7 @@ import welcome from './assets/welcome.png';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'; // Import useNavigate
 import Names from './Names'; // Import the Names component
+import HomePage from './HomePage.js';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         {/* The default route to load the welcome page */}
         <Route path="/" element={<Main />} />
         {/* The route to navigate to the Names page */}
-        <Route path="/names" element={<Names />} />
+        <Route path="/home" element={<HomePage />} />
       </Routes>
     </Router>
   );
@@ -25,7 +26,7 @@ function Main() {
   useEffect(() => {
     // Event listener for the entire document
     const handleClick = () => {
-      navigate('/names'); // Navigate to /names on any click
+      navigate('/home'); // Navigate to /names on any click
     };
 
     // Add the event listener to the document
